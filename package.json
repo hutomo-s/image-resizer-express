@@ -1,0 +1,17 @@
+{
+  "name": "image-resizer-express",
+  "version": "1.0.0",
+  "description": "gm image resizer with express js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Hutomo Sugianto",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-processimage": "^8.1.0",
+    "gm": "^1.23.1"
+  }
+}
