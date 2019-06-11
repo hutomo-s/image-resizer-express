@@ -58,13 +58,28 @@ class Media {
             //gm(image).resize(width, height).stream().pipe(response);
 
             gm(image)
-		    .resize(width, height)
+            .resize(width, height)
+            
+            // TODO filename using uuid
 		    .write('./public/tmp.png', (err) => {
 		      if (err) {
 		        console.log(err); 
 		      } else {
-		      	//var del = 1
-		        response.sendFile(__dirname + '/public/tmp.png');
+                //var del = 1
+                
+                // TODO filename using uuid  
+                response.sendFile(__dirname + '/public/tmp.png');
+
+                // https://stackoverflow.com/questions/46858445/express-js-response-sent-callback
+                response.on('finish', function() {
+                    try {
+                      // TODO filename using uuid
+                      fs.unlinkSync(__dirname + '/public/tmp.png'); 
+                    } catch(e) {
+                      // TODO filename using uuid
+                      console.log("error removing ", __dirname + '/public/tmp.png'); 
+                    }
+                });
 		      }
 		    })
 
