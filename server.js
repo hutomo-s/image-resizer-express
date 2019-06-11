@@ -15,5 +15,7 @@ app.get('/thumb', (req, res) => {
     }
 });
 
+// example url
+// http://localhost:8080/thumb/?src=/public/images/test.jpg
 app.listen(8080);
 console.log("listening to port 8080!");
