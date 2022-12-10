@@ -10,7 +10,7 @@
   "author": "Hutomo Sugianto",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-processimage": "^8.1.0",
     "gm": "^1.23.1"
   }
